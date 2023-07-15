@@ -2,7 +2,7 @@ let range = document.querySelector('#rangeButton');
 let gridValue = document.querySelector('#gridValue');
 let container = document.querySelector('#container');
 let apply = document.querySelector('#apply');
-let div = document.querySelector('.gridElement');
+
 let clear = document.querySelector('#clear');
 
 //get the number of divs in the grid
@@ -18,10 +18,10 @@ apply.addEventListener("click", () => {
     console.log(count);
 })
 clear.addEventListener("click", () => {
-    let count = parseInt(gridValue.textContent);
-    for(i=0;i<count;i++){
-        div.remove();
-    }
+    let divElement = document.querySelectorAll('.gridElement');
+    divElement.forEach(element => {
+        container.removeChild(element);
+    });
 })
 
 function grid() {
