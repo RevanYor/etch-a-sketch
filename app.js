@@ -10,13 +10,13 @@ gridValue.textContent = range.value;
 range.addEventListener("input", (event) => {gridValue.textContent = event.target.value;});
 
 //Create the div grid with apply button
-apply.addEventListener("click", () => {
+/* apply.addEventListener("click", () => {
     let count = parseInt(gridValue.textContent);
     for(i=0;i<count;i++) {
         grid();
     }
     console.log(count);
-})
+}) */
 clear.addEventListener("click", () => {
     let divElement = document.querySelectorAll('.gridElement');
     divElement.forEach(element => {
